@@ -48,14 +48,8 @@ public class RegistrationPageTest extends TestBase {
 	       SoftAssert softassert = new SoftAssert();
 	       System.out.println(ActualURL);
 	       
-	       boolean Fname_Flag= Character.isUpperCase( Fname.charAt(0)); 
-	       boolean Lname_Flag= Character.isUpperCase( Fname.charAt(0)); 
-	       //boolean ValidEmail = Email.contentEquals("+ @ + .com" );
+	     
 	       
-	       softassert.assertTrue(Fname_Flag, " The First letter must be Capital in the First Name");
-	       softassert.assertTrue(Lname_Flag, " The First letter must be Capital in the Last Name");
-	       softassert.assertNotEquals(Fname, Lname);
-	       softassert.assertEquals(PassW, ConfirmPasss);
 	       softassert.assertNotEquals(ActualURL,ExpectURL, " invalid registration");
 	       
 	       softassert.assertAll();
